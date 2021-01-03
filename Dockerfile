@@ -12,4 +12,4 @@ RUN apt -y install wget
 RUN wget https://github.com/trexminer/T-Rex/releases/download/0.19.5/t-rex-0.19.5-linux-cuda11.1.tar.gz
 RUN tar -xzf t-rex-0.19.5-linux-cuda11.1.tar.gz
 
-ENTRYPOINT ./t-rex -a ethash -o stratum+tcp://$SERVER -u $ETH_ADDRESS -p x -w $WORKER_NAME
+ENTRYPOINT ./t-rex -a ethash -o stratum+tcp://$SERVER:4444 -u $ETH_ADDRESS -p x -w $WORKER_NAME
